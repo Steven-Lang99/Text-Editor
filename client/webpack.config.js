@@ -31,16 +31,17 @@ module.exports = () => {
         short_name: 'Jate',
         description: 'Text-Editor application',
         background_color: '#555555',
-        crossorigin: 'use-credentials',
         inject: true,
         theme_color: '#555555',
         start_url: '/',
         publicPath: '/',
+        fingerprints: false,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512], // multiple sizes,
-            ios: true
+            ios: true,
+            destination: path.join('assets', 'icons')
           },
         ]
       }),
