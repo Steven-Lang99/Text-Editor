@@ -6,8 +6,8 @@
   "scripts": {
     "server": "concurrently \"cd client && npm run build\" \"cd server && npm start\" ",
     "dev": "concurrently \"cd server && nodemon server.js\" \"cd client && npm run dev\"",
-    "build:client": "cd client && npm install && npm run build",
-    "build:server": "cd server && npm install",
+    "build:client": "cd ./client && npm install && npm run build",
+    "build:server": "cd ./server && npm install",
     "build": "npm run build:client && npm run build:server",
     "start": "node server/server.js"
   },
