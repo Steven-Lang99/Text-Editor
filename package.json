@@ -6,6 +6,7 @@
   "scripts": {
     "server": "concurrently \"cd client && npm run build\" \"cd server && npm start\" ",
     "dev": "concurrently \"cd client && npm run dev\" \"cd server && nodemon server.js\" ",
+    "heroku-postbuild": "echo Skip builds on Heroku",
     "build": "cd client && npm run build",
     "start": "npm run build && cd server && node server.js"
   },
